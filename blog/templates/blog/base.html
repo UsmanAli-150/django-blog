@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Base</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        div#card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        p {
+            color: #666;
+            text-align: center;
+            font-size: 20px;
+        }
+        ol{
+            padding-left: 20px;
+            list-style-type: decimal;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/home">Home</a> |
+        <a href="/about">About</a>
+    </nav>
+    {% block content %}
+        <p>Over-Riding will happen here</p>
+    {% endblock%}
+</body>
+</html>
