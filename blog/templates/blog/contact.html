@@ -1,7 +1,8 @@
 {% extends "blog/base.html" %}
 
 {% block content %}
-<p>{{message}}</p>
+<div class="contact-container">
+    <p>{{message}}</p>
 
 {% for contact in contacts%}
 <p>You can contact us at {{contact.email}} or call us at {{contact.phone}}.</p>
@@ -11,5 +12,6 @@
 <p> Yes, You can apply for internships.</p>
 {% else %}
 <p>Sorry! Right now, we are not providing internships.</p>
+</div>
 {% endif %}
 {% endblock %} 

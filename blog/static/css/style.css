@@ -1,0 +1,25 @@
+body{
+    font-family: Tahoma,Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    background-color: #7821ca;
+}
+nav{
+    background-color: #26db35;
+    color: #fff;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.home-container {
+    text-align: center;
+    margin-top: 50px;
+    color: #fff;
+}
+.contact-container {
+    text-align: center;
+    margin-top: 50px;
+    color: #fff;
+}
+
