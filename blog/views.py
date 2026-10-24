@@ -1,10 +1,10 @@
 from django.shortcuts import render
+from .models import Post
 
 def index(request):
+    posts = Post.objects.all()
     context = {
-        'name': 'Salaar',
-        'Semester': '05',
-        'Hobbies': ['Coding', 'Gaming', 'Reading']
+        'posts': posts
     }
     return render(request, 'blog/index.html', context)
 
