@@ -2,15 +2,19 @@ body{
     font-family: Tahoma,Arial, sans-serif;
     line-height: 1.5;
     margin: 0;
-    background-color: #7821ca;
+    background-color: #FDF6E3;
+    color: #334155;
 }
 nav{
-    background-color: #26db35;
-    color: #fff;
+    background-color: #C8D5B9;
+    color: #E2E8F0;
     padding: 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+h1, h2, h3, a{
+    color: #0F172A;
 }
 .home-container {
     text-align: center;
