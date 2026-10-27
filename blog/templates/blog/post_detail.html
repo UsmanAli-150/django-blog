@@ -1,6 +1,7 @@
 {% extends "blog/base.html" %}
 
 {% block content %}
+    <h1>Total Posts: {{ total_posts }}</h1>
     <h1>{{ post.title }}</h1>
     <p>{{ post.content }}</p>
     <small>By {{ post.author }} — {{ post.date_created }}</small>

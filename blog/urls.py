@@ -7,5 +7,7 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('base/', views.base, name='base'),
     path('contact/',views.contact,name='contact'),
-    path('post/<int:id>/', views.post_detail, name='post_detail'),
+    path('post/<int:pk>/', views.post_detail, name='post_detail'),
+    path('post/<str:name>/', views.post_filter, name='post_filter'),
+    path('post/', views.latest_posts, name='latest_post') 
 ]

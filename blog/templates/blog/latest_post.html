@@ -1,0 +1,10 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+<h1>Total Posts: {{total_posts}}</h1>
+<h1>Latest Blog:</h1>
+<h2>{{ post.title }}</h2>
+<p>{{ post.content }}</p>
+<small>{{ post.date_created }}</small>
+<hr>
+{% endblock  %}
