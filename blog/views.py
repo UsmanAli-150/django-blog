@@ -1,5 +1,6 @@
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render, redirect
 from .models import Post
+from .forms import PostForm
 
 def index(request):
     posts = Post.objects.order_by('-date_created')
@@ -55,3 +56,16 @@ def contact(request):
         ]
     }
     return render(request, 'blog/contact.html', context)
+
+def create_post(request):
+    if request.method == 'POST':
+        form = PostForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('index')
+    else:
+        form = PostForm()
+    context = {
+        'form': form
+    }
+    return render(request, 'blog/create_post.html', context)
