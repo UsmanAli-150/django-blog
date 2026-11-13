@@ -69,3 +69,21 @@ def create_post(request):
         'form': form
     }
     return render(request, 'blog/create_post.html', context)
+
+def edit_post(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    if request.method == 'POST':
+        form = PostForm(request.POST, instance=post)   # edit THIS post
+        if form.is_valid():
+            form.save()                                # UPDATE, not INSERT
+            return redirect('post_detail', pk=post.pk)
+    else:
+        form = PostForm(instance=post)                 # form pre-filled
+    return render(request, 'blog/create_post.html', {'form': form})
+
+def delete_post(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    if request.method == 'POST':      # only a real confirmed submit deletes
+        post.delete()
+        return redirect('index')
+    return render(request, 'blog/delete_post.html', {'post': post})

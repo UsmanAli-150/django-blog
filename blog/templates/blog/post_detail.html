@@ -6,5 +6,9 @@
     <p>{{ post.content }}</p>
     <small>By {{ post.author }} — {{ post.date_created }}</small>
     <br><br>
+    
+    <a href="{% url 'edit_post' post.pk %}">Edit</a> |
+    <a href="{% url 'delete_post' post.pk %}">Delete</a><br/><br/>
+
     <a href="/">← Back to Home</a>
 {% endblock %}
