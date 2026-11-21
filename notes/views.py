@@ -40,3 +40,7 @@ def delete_note(request,pk):
         note.delete()
         return redirect("note_list")
     return render(request,"notes/note_confirm_delete.html",{"note":note})
+
+def important_notes(request):
+    notes = Note.objects.filter(is_important=True).order_by("-created")
+    return render(request,"notes/note_list.html",{"notes":notes})

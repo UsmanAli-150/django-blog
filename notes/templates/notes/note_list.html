@@ -2,8 +2,10 @@
 
 {% block content %}
     <h1>My Notes</h1>
-    <p><a href="{% url 'note_create' %}">+ Add New Note</a></p>
-
+    <p><a href="{% url 'note_create' %}">+ Add New Note</a>||  
+    <a href="{% url 'important_notes' %}">Important Notes</a>||  
+    <a href="{% url 'note_list' %}">All Notes</a></p>
+    
     <ul>
         {% for note in notes %}
         <li>
