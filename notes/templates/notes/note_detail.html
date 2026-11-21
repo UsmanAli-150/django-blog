@@ -1,0 +1,11 @@
+{% extends 'notes/base.html' %}
+
+{% block content %}
+    <h1>{{ note.title }}</h1>
+    <p>{{ note.content }}</p>
+    <p>Important: {% if note.is_important %}⭐ Yes{% else %}No{% endif %}</p>
+    <p>Created: {{ note.created }}</p>
+    
+    <hr>
+    <a href="{% url 'note_list' %}">Back to List</a>
+{% endblock %}

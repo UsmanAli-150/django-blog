@@ -1,0 +1,79 @@
+body {
+    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    color: #333;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: white;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    margin-right: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Form styling */
+/* Form improvements */
+form p {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input[type="text"], 
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+form textarea {
+    height: 100px; /* Makes the content box shorter */
+    resize: vertical;
+}
+
+form input[type="checkbox"] {
+    margin-top: 5px;
+    width: 20px;
+    height: 20px;
+}
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #0056b3;
+}

@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'tasks',
+    'notes',
 ]
 
 MIDDLEWARE = [
@@ -120,6 +122,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'blog' / 'static',
+    BASE_DIR / 'notes' / 'static',
 ]
 
 

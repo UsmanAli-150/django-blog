@@ -1,0 +1,4 @@
+<h1>{{ task.title }}</h1>
+<p>Done: {% if task.done %}✅ Yes{% else %}No{% endif %}</p>
+<p>Created: {{ task.created }}</p>
+<a href="{% url 'task_list' %}">Back to list</a>
